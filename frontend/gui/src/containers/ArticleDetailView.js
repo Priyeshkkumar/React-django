@@ -8,10 +8,11 @@ class ArticleDetail extends Component {
   };
 
   componentDidMount() {
-    const articleId = this.props.match.paras.articleId;
-    Axios.get("http://127.0.0.1:8000/api/${articleId}").then((res) => {
+    const articleID = this.props.match.params.articleID;
+    // console.log(articleId);
+    Axios.get(`http://127.0.0.1:8000/api/${articleID}`, {}).then((res) => {
       this.setState({
-        articles: res.data,
+        article: res.data,
       });
     });
   }
