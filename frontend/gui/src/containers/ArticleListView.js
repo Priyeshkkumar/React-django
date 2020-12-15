@@ -13,7 +13,6 @@ class ArticleList extends Component {
       this.setState({
         articles: res.data,
       });
-      console.log(res.data);
     });
   }
 
